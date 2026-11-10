@@ -88,6 +88,8 @@ Login SPK Guru
 
 Login menggunakan akun pengujian sesuai dengan peran pengguna yang tersedia.
 
+http://localhost/spk_guru_saw/
+
 Catatan: Nama folder aplikasi, nama database, dan konfigurasi koneksi harus disesuaikan dengan source code yang digunakan.
 
 E. Cara Memeriksa dan Melakukan Pengujian
