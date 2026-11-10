@@ -40,7 +40,7 @@ Cara menghitung rata-rata nilai kedua penilai
 
 Dengan rumus :
 
-![Ilustrasi/perhitungan](assets/image_12.png)
+![Ilustrasi/perhitungan](../assets/image_12.png)
 
 Keterangan:
 
