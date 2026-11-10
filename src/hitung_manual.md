@@ -44,43 +44,43 @@ Dengan rumus :
 
 Keterangan:
 
-![Ilustrasi/perhitungan](assets/image_10.png)
+![Ilustrasi/perhitungan](../assets/image_10.png)
 
 Penilaian C1
 
 Penilaian cukup dan cukup
 
-![Ilustrasi/perhitungan](assets/image_05.png)
+![Ilustrasi/perhitungan](../assets/image_05.png)
 
 Penilaian C2
 
 Penilaian masing-masing memiliki 1 sertifikat
 
-![Ilustrasi/perhitungan](assets/image_01.png)
+![Ilustrasi/perhitungan](../assets/image_01.png)
 
 Penilaian C3
 
 Penilai A memberi 80, penilai B memberi 60
 
-![Ilustrasi/perhitungan](assets/image_16.png)
+![Ilustrasi/perhitungan](../assets/image_16.png)
 
 Penilaian C4
 
 Penilai A memberi 80, penilai B memberi 40
 
-![Ilustrasi/perhitungan](assets/image_14.png)
+![Ilustrasi/perhitungan](../assets/image_14.png)
 
 Penilaian C5
 
 Penilai A memberi 80, penilai B memberi 100
 
-![Ilustrasi/perhitungan](assets/image_11.png)
+![Ilustrasi/perhitungan](../assets/image_11.png)
 
 Penilaian C6
 
 Keduanya menyatakan tidak ada karya
 
-![Ilustrasi/perhitungan](assets/image_06.png)
+![Ilustrasi/perhitungan](../assets/image_06.png)
 
 Hasil rata-ratanya adalah sebagai berikut :
 
@@ -99,7 +99,7 @@ Setelah mendapatkan rata-rata, kita mengubah nilai tersebut menjadi nilai normal
 
 Karena keenam kriteria merupakan kriteria Benefit (semakin tinggi nilai, semakin baik), rumus yang digunakan adalah:
 
-![Ilustrasi/perhitungan](assets/image_02.png)
+![Ilustrasi/perhitungan](../assets/image_02.png)
 
 Penjelasan sederhananya :
 
@@ -113,27 +113,27 @@ Berikut perhitungan satu per satu
 
 C1
 
-![Ilustrasi/perhitungan](assets/image_17.png)
+![Ilustrasi/perhitungan](../assets/image_17.png)
 
 C2
 
-![Ilustrasi/perhitungan](assets/image_13.png)
+![Ilustrasi/perhitungan](../assets/image_13.png)
 
 C3
 
-![Ilustrasi/perhitungan](assets/image_08.png)
+![Ilustrasi/perhitungan](../assets/image_08.png)
 
 C4
 
-![Ilustrasi/perhitungan](assets/image_07.png)
+![Ilustrasi/perhitungan](../assets/image_07.png)
 
 C5
 
-![Ilustrasi/perhitungan](assets/image_03.png)
+![Ilustrasi/perhitungan](../assets/image_03.png)
 
 C6
 
-![Ilustrasi/perhitungan](assets/image_15.png)
+![Ilustrasi/perhitungan](../assets/image_15.png)
 
 Hasil normalisasinya :
 
@@ -154,13 +154,13 @@ Sekarang kita kalikan setiap nilai normalisasi dengan bobot kriterianya, lalu ju
 
 Rumus umum SAW
 
-![Ilustrasi/perhitungan](assets/image_09.png)
+![Ilustrasi/perhitungan](../assets/image_09.png)
 
 Untuk sistem kami, rumus lengkapnya adalah :
 
-![Ilustrasi/perhitungan](assets/image_04.png)
+![Ilustrasi/perhitungan](../assets/image_04.png)
 
-Masukkan nilai normalisasi Neysa yang teklah dihitung
+Masukkan nilai normalisasi Neysa yang telah dihitung
 
 | Kriteria | Normalisasi | Bobot | Perhitungan |  |
 |---|---|---|---|---|
@@ -178,7 +178,7 @@ Lalu jumlahkan semua hasil perkaliannya dan didapati lah hasil akhir yaitu
 
 Jadi nilai akhir SAW Neysa adalah 0,571 berdasarkan bobot, konversi nilai, dan asumsi normalisasi yang digunakan. Dan hasilnya juga sama dengan hasil yang ada pada perhitungan SAW aplikasi.
 
-![Ilustrasi/perhitungan](assets/image_18.png)
+![Ilustrasi/perhitungan](../assets/image_18.png)
 
 ### Hasil Rata-rata
 
