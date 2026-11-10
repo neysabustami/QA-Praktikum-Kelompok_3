@@ -1,0 +1,218 @@
+﻿ID Test Case;TC-ADM-001
+Requirement/Risk;REQ-01 – Pengguna dapat login menggunakan akun yang terdaftar. R-05 – Risiko akses tidak sah.
+Tujuan;Memastikan Admin dapat login menggunakan username dan password yang benar.
+Precondition;Aplikasi sudah berjalan dan akun Admin telah terdaftar di database.
+Langkah Pengujian;1. Buka halaman login. 2. Masukkan username Admin. 3. Masukkan password yang benar. 4. Klik tombol Login.
+Test Data;"Username: admin; Password: password Admin yang terdaftar."
+Expected Result;Sistem menerima proses login dan menampilkan halaman dashboard Admin.
+Actual Result;Belum diuji.
+Status;Belum diuji.
+Evidence;EV-001 – Screenshot hasil login Admin.
+;
+;
+ID Test Case;TC-ADM-002
+Requirement/Risk;REQ-01 – Sistem dapat melakukan validasi username pada pengelolaan akun. R-03 -Resiko username yang tidak sesuai ketentuan tetap diterima oleh sistem
+Tujuan;Memastikan system dapat memvalidasi panjang username berdasarkan batas minimum dan maksimum yang ditentukan
+Precondition;Penggunaan telah membuka halaman pengelolaan akun dan form tambah atau edit akun tersedia
+Langkah Pengujian;1. Buka halaman Data user. 2. Pilih tambah atau edit akun. 3. Masukkan username dengan panjang karakter di bawah batas minimum. 4. Masukkan username dengan panjang tepat pada batas minimum. 5. Masukkan username dengan panjang tepat pada batas maksimum. 6. Masukkan usename dengan panjang melebihi batas maksimum. 7. Amati respons validasi dari sistem
+Test Data;Menggunakan variasi Panjang username berdasarkan batas maksimum 
+Expected Result;Sistem menolak username yang panjangnya berada dalam luar batas maksimum 
+Actual Result;Belum diuji
+Status;Belum diuji
+Evidence;EV-002– Screenshot pengujian valid atas Panjang username
+;
+;
+ID Test Case;TC-ADM-003
+Requirement/Risk;REQ-02 – Admin dapat menambahkan data guru. R-03 – Risiko kesalahan atau duplikasi data guru.
+Tujuan;Memastikan Admin dapat menambahkan data guru dengan informasi yang valid.
+Precondition;Admin sudah login dan berada pada halaman pengelolaan data guru.
+Langkah Pengujian;1. Buka menu Data Guru. 2. Pilih Tambah Data. 3. Masukkan identitas guru yang belum terdaftar. 4. Klik Simpan.
+Test Data;"Nama: Andi Saputra; NIP: 198501012010011001; Mata Pelajaran; Data lain diisi sesuai kolom pada aplikasi."
+Expected Result;Sistem berhasil menyimpan data guru dan menampilkan data tersebut pada daftar guru.
+Actual Result;Belum diuji.
+Status;Belum diuji.
+Evidence;EV-003 – Screenshot data guru berhasil ditambahkan.
+;
+;
+ID Test Case;TC-ADM-004
+Requirement/Risk;REQ-02 – Data guru harus memiliki identitas yang unik. R-03 – Risiko duplikasi data guru.
+Tujuan;Memastikan sistem menolak penambahan data guru dengan Username yang sudah terdaftar.
+Precondition;Admin sudah login dan terdapat data guru dengan username di database.
+Langkah Pengujian;1. Buka menu Data Guru. 2. Pilih Tambah Data. 3. Masukkan username yang sudah terdaftar. 4. Lengkapi kolom lainnya. 5. Klik Simpan.
+Test Data;Username: ahmad (sudah terdaftar).
+Expected Result;Sistem menolak penyimpanan data dan menampilkan pemberitahuan bahwa username sudah digunakan. Data duplikat tidak ditambahkan.
+Actual Result;Belum diuji.
+Status;Belum diuji.
+Evidence;EV-004 – Screenshot pemberitahuan username duplikat.
+;
+;
+ID Test Case;TC-ADM-005
+Requirement/Risk;REQ-03 – Total bobot kriteria harus berjumlah 100%. R-02 – Risiko kesalahan pengaturan bobot.
+Tujuan;Memastikan sistem menolak total bobot kriteria yang tidak berjumlah 100%.
+Precondition;Admin sudah login dan berada pada halaman pengelolaan kriteria.
+Langkah Pengujian;1. Buka menu Kriteria. 2. Masukkan bobot setiap kriteria dengan total 90%. 3. Klik Simpan atau proses validasi.
+Test Data;"C1: 25%; C2: 20%; C3: 20%; C4: 15%; C5: 10%. Total: 90%."
+Expected Result;Sistem menolak pengaturan bobot dan menampilkan pemberitahuan bahwa total bobot harus berjumlah 100%.
+Actual Result;Belum diuji.
+Status;Belum diuji.
+Evidence;EV-005 – Screenshot validasi total bobot 90%.
+;
+;
+ID Test Case;TC-TIM-001
+Requirement/Risk;REQ-04 – Tim Penilai dapat memasukkan nilai yang valid. R-04 – Risiko kesalahan input nilai.
+Tujuan;Memastikan sistem menerima nilai penilaian yang berada dalam rentang yang diperbolehkan.
+Precondition;Tim Penilai sudah login dan data guru serta kriteria telah tersedia.
+Langkah Pengujian;1. Buka halaman Penilaian. 2. Pilih guru yang akan dinilai. 3. Masukkan nilai pada setiap kriteria. 4. Klik Simpan.
+Test Data;"Nilai C1: 80; C2: 85; C3: 90; C4: 75; C5: 80."
+Expected Result;Sistem menerima dan menyimpan nilai penilaian sesuai data yang dimasukkan.
+Actual Result;Belum diuji.
+Status;Belum diuji.
+Evidence;EV-005 – Screenshot penilaian berhasil disimpan.
+;
+;
+ID Test Case;TC-TIM-002
+Requirement/Risk;REQ-04 – Sistem menerima pilihan indikator minimum yang diperbolehkan. R-04 – Risiko kesalahan validasi penilaian.
+Tujuan;Memastikan sistem menerima kategori terendah pada setiap kriteria.
+Precondition;Tim Penilai sudah login dan berada pada halaman Penilaian.
+Langkah Pengujian;1. Pilih guru. 2. Pilih kategori terendah pada C1 sampai C6. 3. Klik Simpan.
+Test Data;"C1: Sangat Kurang (20); C2: Tidak ada sertifikat; C3: Sangat Kurang (20); C4: Sangat Kurang (20); C5: Sangat Kurang (20); C6: Tidak ada karya."
+Expected Result;Sistem menerima seluruh pilihan kategori terendah yang tersedia.
+Actual Result;Belum diuji.
+Status;Belum diuji.
+Evidence;EV-006 – Screenshot penerimaan indikator terendah.
+;
+;
+ID Test Case;TC-TIM-003
+Requirement/Risk;REQ-04 – Sistem menerima indikator maksimum. R-04 – Risiko kesalahan validasi penilaian.
+Tujuan;Memastikan sistem menerima kategori tertinggi pada setiap kriteria.
+Precondition;Tim Penilai sudah login dan berada pada halaman Penilaian.
+Langkah Pengujian;1. Pilih guru. 2. Pilih kategori tertinggi pada C1 sampai C6. 3. Klik Simpan.
+Test Data;"C1: Sangat Baik (100); C2: Lebih dari 3 sertifikat; C3: Sangat Baik (100); C4: Sangat Baik (100); C5: Sangat Baik (100); C6: Tingkat nasional/internasional."
+Expected Result;Sistem menerima seluruh pilihan kategori tertinggi yang tersedia.
+Actual Result;Belum diuji.
+Status;Belum diuji.
+Evidence;EV-007 – Screenshot penerimaan indikator tertinggi.
+;
+;
+ID Test Case;TC-TIM-004
+Requirement/Risk;REQ-04 – Penilaian harus lengkap sebelum diproses. R-04 – Risiko kesalahan input atau data penilaian tidak lengkap.
+Tujuan;Memastikan sistem tidak memproses penilaian yang belum lengkap.
+Precondition;Tim Penilai sudah login dan data guru telah tersedia.
+Langkah Pengujian;1. Buka halaman Penilaian. 2. Pilih salah satu guru. 3. Isi sebagian nilai kriteria. 4. Biarkan salah satu atau beberapa kriteria kosong. 5. Klik Simpan atau proses penilaian.
+Test Data;"C1: 80; C2: 85; C3: kosong; C4: 75; C5: 80."
+Expected Result;Sistem menolak penyimpanan atau pemrosesan penilaian yang belum lengkap dan memberikan pemberitahuan mengenai nilai yang belum diisi.
+Actual Result;Belum diuji.
+Status;Belum diuji.
+Evidence;EV-010 – Screenshot validasi penilaian yang belum lengkap.
+;
+;
+ID Test Case;TC-KEP-001
+Requirement/Risk;REQ-05 – Sistem dapat melakukan perhitungan menggunakan metode SAW. R-01 – Risiko kesalahan rumus perhitungan.
+Tujuan;Memastikan hasil perhitungan SAW pada aplikasi sesuai dengan perhitungan manual.
+Precondition;Data guru, kriteria, bobot, dan nilai penilaian telah tersedia serta lengkap.
+Langkah Pengujian;1. Siapkan data nilai guru dan bobot kriteria. 2. Hitung normalisasi secara manual sesuai jenis kriteria. 3. Hitung nilai preferensi menggunakan bobot yang telah ditetapkan. 4. Jalankan perhitungan SAW pada aplikasi. 5. Bandingkan hasil aplikasi dengan hasil perhitungan manual.
+Test Data;"Gunakan data nilai guru yang sama pada perhitungan manual dan aplikasi. Contoh nilai: C1: 25%; C2: 25%; C3: 15%; C4: 10%; C5: 15%; C6: 10% Bobot mengikuti konfigurasi kriteria yang telah ditetapkan dan berjumlah 100%."
+Expected Result;Hasil normalisasi dan nilai preferensi pada aplikasi sesuai dengan perhitungan manual, dengan memperhatikan ketelitian angka desimal yang digunakan.
+Actual Result;Belum diuji.
+Status;Belum diuji.
+Evidence;EV-011 – Screenshot hasil perhitungan SAW
+;
+;
+ID Test Case;TC-KEP-002
+Requirement/Risk;REQ-06 – Sistem menampilkan perangkingan berdasarkan nilai preferensi. R-01 – Risiko kesalahan hasil perangkingan.
+Tujuan;Memastikan sistem mengurutkan hasil perangkingan guru dari nilai preferensi tertinggi ke terendah.
+Precondition;Perhitungan SAW telah dilakukan dan terdapat lebih dari satu guru yang memiliki hasil penilaian lengkap.
+Langkah Pengujian;1. Login menggunakan akun Kepala Sekolah. 2. Buka halaman pengesahan. 3. Periksa nilai preferensi setiap guru yang sudah di nilai oleh Tim Penilai. 4. Bandingkan urutan peringkat dengan nilai preferensinya.
+Test Data;"Gunakan data beberapa guru dengan nilai preferensi yang berbeda. Contoh: Guru A = 0,85; Guru B = 0,78; Guru C = 0,92."
+Expected Result;Sistem menampilkan Guru C pada peringkat pertama, Guru A pada peringkat kedua, dan Guru B pada peringkat ketiga.
+Actual Result;Belum diuji.
+Status;Belum diuji.
+Evidence;EV-012 – Screenshot hasil perangkingan.
+;
+;
+ID Test Case;TC-KEP-002
+Requirement/Risk;REQ-06 – Sistem menampilkan perangkingan berdasarkan nilai preferensi. R-01 – Risiko kesalahan hasil perangkingan.
+Tujuan;Memastikan sistem mengurutkan hasil perangkingan guru dari nilai preferensi tertinggi ke terendah.
+Precondition;Perhitungan SAW telah dilakukan dan terdapat lebih dari satu guru yang memiliki hasil penilaian lengkap.
+Langkah Pengujian;1. Login menggunakan akun Kepala Sekolah. 2. Buka halaman pengesahan. 3. Periksa nilai preferensi setiap guru yang sudah di nilai oleh Tim Penilai. 4. Bandingkan urutan peringkat dengan nilai preferensinya.
+Test Data;"Gunakan data beberapa guru dengan nilai preferensi yang berbeda. Contoh: Guru A = 0,85; Guru B = 0,78; Guru C = 0,92."
+Expected Result;Sistem menampilkan Guru C pada peringkat pertama, Guru A pada peringkat kedua, dan Guru B pada peringkat ketiga.
+Actual Result;Belum diuji.
+Status;Belum diuji.
+Evidence;EV-012 – Screenshot hasil perangkingan.
+;
+;
+ID Test Case;TC-GUR-001
+Requirement/Risk;REQ-07 – Guru hanya dapat melihat hasil penilaiannya sendiri setelah dipublikasikan. R-05 – Risiko akses tidak sah.
+Tujuan;Memastikan Guru dapat melihat hasil penilaiannya sendiri apabila hasil telah dipublikasikan.
+Precondition;Akun Guru telah terdaftar, hasil penilaian telah dipublikasikan, dan Guru sudah login.
+Langkah Pengujian;1. Login menggunakan akun Guru. 2. Buka halaman dashboard. 3. Periksa informasi hasil penilaian yang ditampilkan.
+Test Data;Akun Guru yang terdaftar dan memiliki hasil penilaian yang telah dipublikasikan.
+Expected Result;Sistem hanya menampilkan hasil penilaian milik Guru yang sedang login.
+Actual Result;Belum diuji.
+Status;Belum diuji.
+Evidence;EV-013 – Screenshot halaman hasil penilaian Guru.
+;
+;
+ID Test Case;TC-GUR-002
+Requirement/Risk;REQ-07 – Pembatasan hak akses pengguna. R-05 – Risiko pengguna mengakses data yang bukan kewenangannya.
+Tujuan;Memastikan Guru tidak dapat mengakses halaman Admin atau melihat hasil penilaian milik Guru lain.
+Precondition;Guru sudah login menggunakan akun Guru dan terdapat data guru lain di dalam sistem.
+Langkah Pengujian;1. Login menggunakan akun Guru. 2. Coba membuka halaman Admin melalui alamat halaman yang dimasukkan secara langsung. 3. Coba membuka data hasil penilaian milik Guru lain. 4. Amati respons sistem.
+Test Data;Akun Guru A mencoba mengakses halaman Admin dan data hasil penilaian Guru B.
+Expected Result;Sistem menolak akses yang tidak sesuai dengan hak pengguna dan tidak menampilkan data yang bukan miliknya.
+Actual Result;Belum diuji.
+Status;Belum diuji.
+Evidence;EV-014 – Screenshot penolakan akses oleh sistem.
+;
+;
+Komponen;Keterangan
+ID Test Case;TC-GUR-003
+Requirement/Risk;Kebutuhan proses pengunggahan dokumen Guru. Risiko: dokumen gagal diunggah atau status dokumen tidak berubah menjadi Pending.
+Tujuan;Memastikan dokumen berhasil diunggah oleh Guru dan status dokumen berubah dari Belum Upload menjadi Pending.
+Precondition;Guru sudah login menggunakan akun Guru dan belum mengunggah dokumen.
+Langkah Pengujian;1. Login menggunakan akun Guru. 2. Buka halaman pengunggahan dokumen. 3. Pilih dokumen yang akan diunggah. 4. Klik tombol Upload. 5. Periksa status dokumen setelah berhasil diunggah.
+Test Data;Akun Guru yang terdaftar dan file dokumen sesuai ketentuan sistem.
+Expected Result;Dokumen berhasil diunggah dan status berubah dari Belum Upload menjadi Pending.
+Actual Result;Belum diuji.
+Status;Belum diuji.
+Evidence;EV-ST-001 – Screenshot proses pengunggahan dokumen dan perubahan status menjadi Pending.
+;
+;
+Komponen;Keterangan
+ID Test Case;TC-ADM-006
+Requirement/Risk;Kebutuhan proses verifikasi dokumen oleh Admin. Risiko: status dokumen tidak berubah setelah Admin melakukan verifikasi.
+Tujuan;Memastikan status dokumen Guru berubah dari Pending menjadi Diverifikasi setelah Admin melakukan verifikasi.
+Precondition;Admin sudah login dan terdapat dokumen Guru yang telah diunggah dengan status Pending.
+Langkah Pengujian;1. Login menggunakan akun Admin. 2. Buka halaman verifikasi dokumen Guru. 3. Pilih dokumen Guru dengan status Pending. 4. Lakukan verifikasi dokumen. 5. Periksa perubahan status dokumen.
+Test Data;Dokumen Guru yang telah diunggah dan memiliki status Pending.
+Expected Result;Status dokumen Guru berhasil berubah dari Pending menjadi Diverifikasi setelah Admin melakukan verifikasi.
+Actual Result;Belum diuji.
+Status;Belum diuji.
+Evidence;EV-ST-002 – Screenshot proses verifikasi dan perubahan status dokumen menjadi Diverifikasi.
+;
+;
+Komponen;Keterangan
+ID Test Case;TC-TIM-005
+Requirement/Risk;Kebutuhan penampilan data Guru pada daftar Tim Penilai setelah dokumen diverifikasi. Risiko: data Guru yang telah diverifikasi tidak muncul pada daftar Tim Penilai.
+Tujuan;Memastikan nama Guru muncul pada daftar Tim Penilai setelah dokumennya berhasil diverifikasi oleh Admin.
+Precondition;Dokumen Guru telah diunggah, diverifikasi oleh Admin, dan status dokumen sudah Diverifikasi.
+Langkah Pengujian;1. Login menggunakan akun Tim Penilai. 2. Buka halaman daftar Guru yang akan dinilai. 3. Cari nama Guru yang dokumennya telah diverifikasi. 4. Periksa apakah nama Guru muncul pada daftar Tim Penilai.
+Test Data;Data Guru yang dokumennya telah diverifikasi oleh Admin.
+Expected Result;Nama Guru berhasil muncul pada daftar Tim Penilai setelah dokumennya diverifikasi.
+Actual Result;Belum diuji.
+Status;Belum diuji.
+Evidence;EV-ST-003 – Screenshot daftar Tim Penilai yang menampilkan nama Guru setelah dokumen diverifikasi.
+;
+;
+Komponen;Keterangan
+ID Test Case;TC-TIM-006
+Requirement/Risk;Kebutuhan pembatasan penampilan data Guru berdasarkan status verifikasi dokumen. Risiko: Guru yang dokumennya belum diverifikasi muncul pada daftar Tim Penilai.
+Tujuan;Memastikan nama Guru tidak muncul pada daftar Tim Penilai selama dokumennya belum diverifikasi oleh Admin.
+Precondition;Guru telah mengunggah dokumen dan status dokumen masih Pending atau belum diverifikasi oleh Admin.
+Langkah Pengujian;1. Login menggunakan akun Tim Penilai. 2. Buka halaman daftar Guru yang akan dinilai. 3. Cari nama Guru yang dokumennya masih berstatus Pending. 4. Periksa apakah nama Guru muncul pada daftar Tim Penilai.
+Test Data;Data Guru yang dokumennya telah diunggah tetapi belum diverifikasi oleh Admin.
+Expected Result;Nama Guru tidak muncul pada daftar Tim Penilai selama dokumennya belum diverifikasi oleh Admin.
+Actual Result;Belum diuji.
+Status;Belum diuji.
+Evidence;EV-ST-004 – Screenshot daftar Tim Penilai yang tidak menampilkan nama Guru dengan dokumen berstatus Pending.
