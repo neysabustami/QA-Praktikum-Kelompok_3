@@ -197,7 +197,7 @@ Video demonstrasi berisi penjelasan dan penggunaan aplikasi, mulai dari proses l
 
 Link YouTube:
 
-[Masukkan tautan video YouTube di sini]
+https://youtu.be/s_LTzfqTens?si=9t3w7pUzVre6L2Pd
 
 Kelompok 3
 
